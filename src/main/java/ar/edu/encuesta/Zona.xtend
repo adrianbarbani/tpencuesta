@@ -2,7 +2,9 @@ package ar.edu.encuesta
 
 import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
+import org.uqbar.commons.utils.Observable
 
+@Observable 
 @Accessors
 class Zona {
     String descripcion
@@ -19,5 +21,9 @@ class Zona {
     
 	override toString(){
 		descripcion
+	}
+	
+	def getDescripcionLoca(){
+		descripcion + "(" + candidatos.size + ")"
 	}
 }

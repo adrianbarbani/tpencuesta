@@ -1,5 +1,6 @@
 package ar.edu.encuesta
 
+import org.uqbar.arena.bindings.PropertyAdapter
 import org.uqbar.arena.widgets.Button
 import org.uqbar.arena.widgets.Label
 import org.uqbar.arena.widgets.Panel
@@ -20,7 +21,7 @@ class EncuestaWindow extends MainWindow<Encuesta> {
 
 		new Label(mainPanel).text = "Zona de votacion"
 		new Selector(mainPanel) => [
-			bindItemsToProperty("zonas")
+			bindItemsToProperty("zonas").adapter = new PropertyAdapter(typeof(Zona), "descripcionLoca")
 			bindValueToProperty("zonaVotacion")
 		]
 
