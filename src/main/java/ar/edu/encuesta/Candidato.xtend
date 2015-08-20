@@ -1,7 +1,9 @@
 package ar.edu.encuesta
 
 import org.eclipse.xtend.lib.annotations.Accessors
+import org.uqbar.commons.utils.Observable
 
+@Observable
 @Accessors
 class Candidato {
     String nombre

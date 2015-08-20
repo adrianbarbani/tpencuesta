@@ -24,6 +24,6 @@ class Zona {
 	}
 	
 	def getDescripcionLoca(){
-		descripcion + "(" + candidatos.size + ")"
+		descripcion + "(" + candidatos.size + ")" //hace que se vea la cantidad de candidatos por zona
 	}
 }
